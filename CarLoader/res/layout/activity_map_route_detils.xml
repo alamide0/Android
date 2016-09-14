@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zsy="http://schemas.android.com/apk/res/com.car.loader"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.car.loader.ui.HeaderView
+        android:id="@+id/h_header"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        zsy:title="路线详情" />
+
+    <ListView
+        android:id="@+id/lv_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

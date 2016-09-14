@@ -1,0 +1,119 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="text_content_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">5dip</item>
+        <item name="android:layout_marginTop">8dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">20dip</item>
+    </style>
+	<style name="text_left">
+        <item name="android:layout_width">wrap_content</item>      
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">8dip</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:textSize">14dip</item>
+        <item name="android:layout_centerVertical">true</item>
+        
+	</style>
+	<style name="text_right">
+        <item name="android:layout_width">wrap_content</item>      
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">8dip</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:textSize">14dip</item>
+        <item name="android:layout_centerVertical">true</item>
+	</style>
+    <style name="activity_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dip</item>
+        <item name="android:background">#8866ff00</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">25dip</item>
+    </style>
+
+    <style name="draw_line">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.3dip</item>
+        <item name="android:background">@android:color/darker_gray</item>
+    </style>
+	<style name="baseTheme" parent="android:Theme.Light">
+    </style>
+
+    <style name="csy_row">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/csy_row_h</item>
+        <item name="android:paddingLeft">@dimen/csy_pd</item>
+    </style>
+
+    <style name="csy_row1" parent="csy_row">
+        <item name="android:background">@drawable/csy_form_row</item>
+    </style>
+
+    <style name="csy_row_label">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">@dimen/csy_label_w</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/csy_label</item>
+    </style>
+
+    <style name="csy_textbox">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/csy_text</item>
+        <item name="android:textColorHint">@color/csy_hint</item>
+        <item name="android:background">@drawable/csy_textbox</item>
+        <item name="android:textSize">@dimen/csy_text_ts</item>
+    </style>
+
+    <style name="csy_textbox1" parent="csy_textbox">
+        <item name="android:layout_marginRight">@dimen/csy_icon_w</item>
+    </style>
+
+    <style name="csy_row_icon">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">@dimen/csy_icon_w</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:scaleType">center</item>
+    </style>
+    
+     <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@drawable/petrol_frame_dialog</item>
+    </style>
+    
+      <style name="dialog_loading" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowBackground">@color/translucent</item>
+    </style>
+</resources>

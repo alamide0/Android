@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zsy="http://schemas.android.com/apk/res/com.car.loader"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.car.loader.ui.HeaderView
+        android:id="@+id/h_header"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        zsy:title="详细信息" />
+
+    <ProgressBar
+        android:id="@+id/pb_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_surround"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/h_header"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/frame"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip" >
+
+            <ImageView
+                android:id="@+id/iv_sign"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dip" />
+
+            <ProgressBar
+                android:id="@+id/pb_loader1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dip" />
+
+            <TextView
+                android:id="@+id/tv_brand"
+                style="@style/text_right"
+                android:layout_centerVertical="true"
+                android:text="" />
+        </RelativeLayout>
+
+        <View style="@style/draw_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip" >
+
+            <TextView
+                style="@style/text_left"
+                android:text="型号" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                style="@style/text_right"
+                android:text="" />
+        </RelativeLayout>
+
+        <View style="@style/draw_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip" >
+
+            <TextView
+                style="@style/text_left"
+                android:text="车牌号" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                style="@style/text_right"
+                android:text="" />
+        </RelativeLayout>
+
+        <View style="@style/draw_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip" >
+
+            <TextView
+                style="@style/text_left"
+                android:text="发动机号" />
+
+            <TextView
+                android:id="@+id/tv_engin_number"
+                style="@style/text_right"
+                android:text="" />
+        </RelativeLayout>
+
+        <View style="@style/draw_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip" >
+
+            <TextView
+                style="@style/text_left"
+                android:text="车身级别" />
+
+            <TextView
+                android:id="@+id/tv_bodylevel"
+                style="@style/text_right"
+                android:text="" />
+        </RelativeLayout>
+
+       
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_query_all"
+        android:layout_marginTop="10dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginLeft="8dip"
+        android:layout_below="@id/ll_surround"
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_click"
+        android:onClick="query"
+        android:text="点我查看最近维护信息" 
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btn_query_my"
+        android:layout_marginTop="10dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginLeft="8dip"
+        android:layout_below="@id/btn_query_all"
+        android:layout_width="fill_parent"
+        android:textColor="@android:color/white"
+        android:layout_height="36dp"
+        android:background="@drawable/button_click"
+        android:onClick="queryMy"
+        android:text="点我查看本号码维护信息" 
+        android:visibility="invisible"/>
+
+</RelativeLayout>

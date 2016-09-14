@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zsy="http://schemas.android.com/apk/res/com.car.loader"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.car.loader.ui.HeaderView
+        android:id="@+id/h_header"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        zsy:title="输入位置" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/frame" >
+        <ImageView 
+            android:id="@+id/iv_search"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:src="@drawable/map_serach"
+            />
+
+        <AutoCompleteTextView
+            android:layout_toRightOf="@id/iv_search"
+            android:id="@+id/actv_search"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:hint="输入内容" />
+       
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip" >
+    </ListView>
+
+</LinearLayout>

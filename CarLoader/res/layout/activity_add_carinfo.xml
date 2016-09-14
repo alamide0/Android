@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zsy="http://schemas.android.com/apk/res/com.car.loader"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <com.car.loader.ui.HeaderView 
+        android:id="@+id/h_header"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        zsy:title="添加车牌号"
+        />
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/frame"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        >
+        
+       
+    <EditText 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dip"
+        android:background="@null"
+        android:id="@+id/et_carnumber"
+        android:layout_marginLeft="10dp"
+        android:hint="车牌号"
+        />
+    </LinearLayout>
+    
+     <Button
+        android:layout_width="fill_parent"
+        android:layout_height="36dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/button_click"       
+        android:textColor="@android:color/white"
+        android:onClick="addFinish"
+        android:text="添加完成" />
+    
+   
+
+</LinearLayout>

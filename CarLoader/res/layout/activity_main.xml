@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include android:id="@+id/titbar" layout="@layout/titlebar" />	
+    <com.car.loader.ui.SlideShowView  
+        android:layout_below="@id/titbar"
+        android:id="@+id/slideshowView"  
+        android:layout_width="fill_parent"  
+        android:layout_height="150dp"  
+        android:layout_centerHorizontal="true" /> 
+     <ScrollView
+         android:layout_below="@id/slideshowView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <com.car.loader.ui.MyGridView
+            android:id="@+id/gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0.0dip"
+            android:listSelector="@null"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0.0dip" />
+    </ScrollView>
+   <TextView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="CopyRight@进阶小队"
+       android:layout_alignParentBottom="true"
+       android:textSize="12dip"
+       
+       android:layout_alignParentRight="true"
+       />
+
+</RelativeLayout>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zsy="http://schemas.android.com/apk/res/com.car.loader"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	<com.car.loader.ui.HeaderView 
+	    android:id="@+id/h_header"
+	    android:layout_width="fill_parent"
+	    android:layout_height="50dip"
+	    zsy:title="我的车辆"
+	    />
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_below="@id/h_header"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dip"
+        android:textSize="14dip"
+        android:visibility="invisible"
+        android:text="您一共有5辆车" />
+
+    <ListView
+        android:id="@+id/lv_car_info"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tv_header"
+        android:layout_centerInParent="true" 
+        android:divider="@null"
+        android:dividerHeight="8dip"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:scrollbars="none"
+        >
+    </ListView>
+	<ProgressBar 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/pb_loader"
+	    android:layout_centerInParent="true"
+	    />
+</RelativeLayout>

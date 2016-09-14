@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zsy="http://schemas.android.com/apk/res/com.car.loader"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.car.loader.ui.HeaderView
+            android:id="@+id/h_header"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            zsy:title="订单查询" />
+
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_marginTop="20dip"
+            android:text="456"
+            android:textSize="18dip" />
+
+        <ListView
+            android:id="@+id/lv_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null" >
+        </ListView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

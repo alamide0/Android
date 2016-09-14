@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zsy="http://schemas.android.com/apk/res/com.car.loader"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.car.loader.ui.HeaderView
+        android:id="@+id/h_header"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        zsy:title="详细信息" />
+
+   
+
+    <LinearLayout
+        android:id="@+id/ll_surround"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/h_header"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/frame"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip" >
+
+            <TextView
+                style="@style/text_left"
+                android:text="车牌号" />
+
+            <TextView
+                android:id="@+id/tv_carnumber"
+                style="@style/text_right"
+                android:text="" />
+        </RelativeLayout>
+
+        <View style="@style/draw_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip" >
+
+            <TextView
+                style="@style/text_left"
+                android:text="姓名" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/text_right"
+                android:text="" />
+        </RelativeLayout>
+
+        <View style="@style/draw_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip" >
+
+            <TextView
+                style="@style/text_left"
+                android:text="时间" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/text_right"
+                android:text="" />
+        </RelativeLayout>
+
+        <View style="@style/draw_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip" >
+
+            <TextView
+                style="@style/text_left"
+                android:text="加油站" />
+
+            <TextView
+                android:id="@+id/tv_station"
+                style="@style/text_right"
+                android:text="" />
+        </RelativeLayout>
+
+        <View style="@style/draw_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip" >
+
+            <TextView
+                style="@style/text_left"
+                android:text="类型" />
+
+            <TextView
+                android:id="@+id/tv_oil_type"
+                style="@style/text_right"
+                android:text="" />
+        </RelativeLayout>
+
+        <View style="@style/draw_line" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dip" >
+
+            <TextView
+                style="@style/text_left"
+                android:text="金额" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                style="@style/text_right"
+                android:text="" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_query_all"
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:layout_below="@id/ll_surround"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/button_click"
+        android:onClick="query"
+        android:text="查看二维码"
+        android:textColor="@android:color/white"
+        android:visibility="visible" />
+
+    
+
+</RelativeLayout>

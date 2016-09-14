@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="#ff0a7dd2" >
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:background="@drawable/image_background"
+                android:scaleType="centerInside"
+                android:src="@drawable/back_" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="选择车牌号"
+                android:textColor="@android:color/white"
+                android:textSize="20dip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dip"
+                android:clickable="true"
+                android:onClick="add"
+                android:text="添加"
+                android:textColor="@android:color/white"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/h_header"
+            android:layout_marginLeft="8dip"
+            android:layout_marginTop="20dip"
+            android:text=""
+            android:textSize="14dip"
+            android:visibility="visible" />
+
+        <ListView
+            android:id="@+id/lv_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip" >
+        </ListView>
+    </LinearLayout>
+	<ProgressBar 
+	    android:id="@+id/pb_loader"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	    />
+</RelativeLayout>

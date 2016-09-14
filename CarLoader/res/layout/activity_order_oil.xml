@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="#ff0a7dd2" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/image_background"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="预约加油"
+            android:textColor="@android:color/white"
+            android:textSize="20dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dip"
+            android:clickable="true"
+            android:onClick="query"
+            android:text="订单查询"
+            android:textColor="@android:color/white"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/frame"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp" >
+
+            <EditText
+                android:id="@+id/tv_carnumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:editable="false"
+                android:hint="车牌号"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:onClick="select"
+                android:src="@drawable/add_order" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.3dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp" >
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:hint="姓名"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.3dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:onClick="selectTime" >
+
+            <EditText
+                android:id="@+id/et_time"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:editable="false"
+                android:hint="时间"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.3dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp" >
+
+            <EditText
+                android:id="@+id/et_station"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:hint="加油站"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.3dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp" >
+
+            <RadioGroup 
+                android:id="@+id/rg"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                
+                >
+                <RadioButton 
+                    android:id="@+id/rg_button1"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="93#"/>
+                <RadioButton 
+                    android:id="@+id/rg_button2"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    
+                    android:text="97#"/>
+                <RadioButton 
+                    android:id="@+id/rg_button3"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:text="95#"/>
+               
+            </RadioGroup>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.3dp"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp" >
+
+            <EditText
+                android:id="@+id/et_money"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:inputType="number"
+                android:hint="金额(元)"
+                android:textSize="16dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="36dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/button_click"
+        android:onClick="post"
+        android:text="提交"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

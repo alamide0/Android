@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="30dip"
+            android:background="@drawable/frame" >
+
+            <ImageView
+                android:id="@+id/iv_open_traffic"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/map_button_selector"
+                android:onClick="openTraffic"
+                android:scaleType="centerInside"
+                android:src="@drawable/traffic_close" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ll"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="false" >
+
+            <Button
+                android:id="@+id/pre"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="2dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/pre_"
+                android:onClick="nodeClick" />
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="2dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/next_"
+                android:onClick="nodeClick" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_mode"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_above="@+id/ll"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dip"
+            android:background="@drawable/map_loaction_selector"
+            android:clickable="true"
+            android:onClick="changeMode" >
+
+            <ImageView
+                android:id="@+id/iv_mode"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/map_normal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_drection"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/rl_top"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="4dip"
+            android:background="@drawable/map_button_selector"
+            android:clickable="true"
+            android:onClick="showDirection" >
+
+            <ImageView
+                android:id="@+id/iv_derction"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/lock" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_state"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/rl_drection"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="4dip"
+            android:background="@drawable/map_button_selector"
+            android:clickable="true"
+            android:onClick="changeState" >
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="普通"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/rl_top"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dip"
+            android:background="@drawable/map_button_selector"
+            android:clickable="true"
+            android:onClick="back" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="返回"
+                android:textColor="#ff0a7dd2"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="60dip"
+            android:layout_marginRight="60dip"
+            android:background="@drawable/frame_map"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/map_line_blank_selector"
+                android:onClick="routeDetils" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_route_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dip" />
+
+                    <TextView
+                        android:id="@+id/tv_route_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#88000000"
+                        android:textSize="10dip" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="详情"
+                        android:textColor="#ff0a7dd2"
+                        android:textSize="10dip" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.3dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:onClick="showPlaceDetil"
+                android:background="@drawable/map_line_blank_selector"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text="当前位置"
+                    android:textColor="#ff0a7dd2"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_place"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#ff0a7dd2"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

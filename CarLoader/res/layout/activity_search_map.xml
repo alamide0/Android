@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_surround"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="起点" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_start"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="当前位置" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="终点" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_end"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="南京工业大学" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_car"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="searchRoute"
+                android:text="自驾路线" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <Button
+            android:id="@+id/btn_change_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="changeMode"
+            android:text="普通" />
+
+        <Button
+            android:id="@+id/btn_open_traffic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/btn_change_mode"
+            android:onClick="openTraffic"
+            android:text="开启路况信息" />
+		<Button 
+		    android:id="@+id/btn_back"
+		    android:onClick="back"
+		    android:layout_below="@id/btn_open_traffic"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="返回"
+		    />
+        <RelativeLayout
+            android:id="@+id/rl_show_route"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:visibility="invisible" >
+
+            <ImageView
+                android:id="@+id/iv_pre"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="@style/text_content_style"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="4564465465" />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_launcher" />
+        </RelativeLayout>
+
+        <SlidingDrawer
+            android:id="@+id/sd"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:content="@+id/myContent1"
+            android:handle="@+id/layout1"
+            android:orientation="vertical" 
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@id/layout1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/myImage1"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/good" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@id/myContent1"
+                android:layout_width="fill_parent"
+                android:layout_height="250dip"
+                android:background="#ffffff" >
+            </ListView>
+        </SlidingDrawer>
+    </RelativeLayout>
+
+</LinearLayout>

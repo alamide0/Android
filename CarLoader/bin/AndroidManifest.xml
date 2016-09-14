@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.car.loader"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <application
+        android:name="com.car.loader.map.SdkApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="P99INrDj5ItMe1OPsqboh4A6GNw3iGdN" />
+        <meta-data
+            android:name="com.thinkland.juheapi.openid"
+            android:value="JHdab81c113bd87611852ebd94ceba5509"
+            ></meta-data>
+
+        <activity
+            android:name="com.car.loader.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.car.loader.MainActivity"/>
+        <activity android:name="com.car.loader.five.ScanInfoActivity" />
+        <activity android:name="com.car.loader.five.FixInfoActivity" />
+        <activity android:name="com.car.loader.five.ShowMaintainInfos" />
+        <activity android:name="com.car.loader.mycar.MyCarInfoActivity" />
+        <activity android:name="com.car.loader.mycar.MyCarDetilInfo" />
+        <activity android:name="com.car.loader.map.RoutePlanDemo" />
+        <activity android:name="com.car.loader.five.ShowMyMaintainInfos" />
+        <activity android:name="com.car.loader.music.MusicHomeActivity" />
+        <activity android:name="com.car.loader.two.OrderOilActivity" />
+        <activity android:name="com.car.loader.two.SelectCarInfoActivity" />
+        <activity android:name="com.car.loader.two.AddCarInfoActivity" />
+        <activity android:name="com.car.loader.two.ShowAllOrdersActivity" />
+        <activity
+            android:name="com.car.loader.first.BeLoginActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="com.car.loader.first.FFillPassCodeActivity" />
+        <activity android:name="com.car.loader.first.FillPassCodeActivity" />
+        <activity android:name="com.car.loader.first.ForgetPwdActivity" />
+        <activity android:name="com.car.loader.first.FPersonInfoActivity" />
+        <activity android:name="com.car.loader.first.RegisterActivity" />
+        <activity
+            android:name="com.car.loader.first.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="com.car.loader.first.PersonInfoActivity" />
+        <activity android:name="com.car.loader.first.ChangeNickNameActivity" />
+        <activity android:name="com.car.loader.first.ChangePwdActivity" />
+        <activity android:name="com.car.loader.map.SelectStartAndEndPlaceActivity" />
+        <activity android:name="com.car.loader.map._RoutePlanDemo" />
+        <activity android:name="com.car.loader.map.NowPlaceActivity" />
+        <activity android:name="com.car.loader.map.SuggestionResultActivity" />
+        <activity android:name="com.car.loader.map.DriveRoutePlan" />
+        <activity android:name="com.car.loader.two.ShowCodeInfoActivity" />
+        <activity android:name="com.car.loader.two.ShowOrderDetilsActivity" />
+        <activity android:name="com.car.loader.illeagequery.CityList" />
+        <activity android:name="com.car.loader.illeagequery.IlleageQuery" />
+        <activity android:name="com.car.loader.illeagequery.ProvinceList" />
+        <activity android:name="com.car.loader.illeagequery.ShortNameList" />
+        <activity android:name="com.car.loader.illeagequery.WeizhangResult" />
+       	<activity android:name="com.car.loader.petrolstation.PetrolStationMainActivity"/>
+        <activity android:name="com.car.loader.petrolstation.RouteActivity"/>
+        <activity android:name="com.car.loader.petrolstation.StationInfoActivity"/>
+        <activity android:name="com.car.loader.petrolstation.StationListActivity"/>
+        <activity android:name="com.car.loader.setting.SettingActivity"/>
+        <activity android:name="com.car.loader.petrolstation.PetrolDriveRoutePlan"/>
+        <activity android:name="com.car.loader.map.ShowRouteDetilsActivity"/>
+        
+        <activity
+            android:name="com.zxing.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <service android:name="com.car.loader.service.MaintainCarInfoService" />
+        <service android:name="com.car.loader.service.CarMusicService" />
+        <service android:name="com.cheshouye.api.client.WeizhangIntentService" />
+
+        <receiver android:name="com.car.loader.receiver.LoginStateReceiver" >
+            <intent-filter android:priority="1000" >
+                <action android:name="com.car.loader.login" />
+                <action android:name="com.car.loader.logout" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
